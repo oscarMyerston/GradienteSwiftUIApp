@@ -10,12 +10,23 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            // MARK: - 1. BASIC GRADIENT TEXT
+            Text("iOS")
+                .font(.system(size: 180))
+                .fontWeight(.black)
+                .foregroundStyle(.teal.gradient)
+            // MARK: - 2. CUSTOM GRADIENT TEXT
+            Text("iOS")
+                .font(.system(size: 180))
+                .fontWeight(.black)
+                .foregroundStyle(
+                    LinearGradient(
+                        colors: [.pink,
+                                 .purple,
+                                 .blue], startPoint: .topLeading, endPoint: .bottomTrailing
+                    ))
+
         }
-        .padding()
     }
 }
 
